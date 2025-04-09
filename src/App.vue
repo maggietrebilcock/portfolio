@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div id="app" class = "flex-container">
+  <div id="app" class="flex-container">
     <nav>
       <router-link to="/">home</router-link>
       <router-link to="/about">about</router-link>
@@ -15,7 +15,6 @@
 </template>
 
 <style scoped>
-
 nav {
   display: flex;
   justify-content: left;
@@ -28,9 +27,9 @@ nav {
 
 
   position: fixed;
-      top: 0;
-      
-      margin: 3rem;
+  top: 0;
+
+  margin: 3rem;
 }
 
 .flex-container {
@@ -39,12 +38,10 @@ nav {
   align-items: center;
 }
 
- @media (min-width: 1024px) { 
-
-
+@media (min-width: 1024px) {
   nav {
     position: fixed;
-    right:0;
+    right: 0;
   }
- }
+}
 </style>
