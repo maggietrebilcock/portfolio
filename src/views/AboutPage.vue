@@ -11,3 +11,9 @@
     name: 'AboutPage',
   }
   </script>
+
+<style scoped>
+  h1, p {
+    color: black;
+  }
+</style>

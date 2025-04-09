@@ -6,9 +6,9 @@
 <template>
   <div id="app" class = "flex-container">
     <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/projects">Projects</router-link>
+      <router-link to="/">home</router-link>
+      <router-link to="/about">about</router-link>
+      <router-link to="/projects">projects</router-link>
     </nav>
     <router-view />
   </div>
@@ -18,9 +18,19 @@
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 2rem;
   margin: 2rem 0;
+
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+
+  position: fixed;
+      top: 0;
+      
+      margin: 3rem;
 }
 
 .flex-container {
@@ -29,23 +39,12 @@ nav {
   align-items: center;
 }
 
-/* @media (min-width: 1024px) { */
+ @media (min-width: 1024px) { 
 
 
-  /* header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  nav {
+    position: fixed;
+    right:0;
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  } */
-
-  /* header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  } */
-
+ }
 </style>
