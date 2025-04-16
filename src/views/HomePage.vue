@@ -13,6 +13,11 @@
   </script>
 
 <style scoped>
+  html, body {
+  overflow: hidden; /* Disable scrolling */
+  height: 100%; /* Ensure height matches viewport */
+  position: fixed; /* Fix the position to prevent scrolling */
+}
     .words_div {
       text-align: right;
       position: fixed;
@@ -40,8 +45,13 @@
       font-size: 1.5rem;
     }
 
-    @media (max-width: 1024px) {
 
+    @media (max-width: 1024px) {
+      html, body {
+        overflow: hidden; /* Disable scrolling */
+        height: 100%; /* Ensure height matches viewport */
+        position: fixed; /* Fix the position to prevent scrolling */
+      }
       .words_div {
         text-align: center;
         margin: 2rem 0;

@@ -1,9 +1,16 @@
 @import './base.css';
 
 html, body {
-  overflow: hidden;
+  overflow: auto; /* Enable scrolling globally */
+  height: auto;
+  width: 100vw;
+  position: relative;
+  overscroll-behavior: contain;
 }
 
+/* html, body {
+  overflow: hidden;
+} */
 
 #app {
   max-width: 1280px;
@@ -12,6 +19,8 @@ html, body {
   font-weight: normal;
 
   background: linear-gradient(180deg, #f2a3d5, white);
+  background-attachment: fixed; 
+  background-size: cover;
   min-height: 100vh;
 }
 
