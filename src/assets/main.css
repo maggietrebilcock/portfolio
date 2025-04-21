@@ -1,7 +1,7 @@
 @import './base.css';
 
 html, body {
-  overflow: auto; /* Enable scrolling globally */
+  overflow: auto;
   height: auto;
   width: 100vw;
   position: relative;
