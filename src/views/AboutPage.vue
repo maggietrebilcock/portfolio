@@ -22,8 +22,8 @@
         <div class = "schools">
 
           <div class = "school">
-            <h1 @click="toggleSection('rpi')">Rensselaer Polytechnic Institute (RPI)</h1>
-            <p v-if="isSectionVisible('rpi')">Here, I am dual majoring in computer 
+            <h2 @click="toggleSection('rpi')">Rensselaer Polytechnic Institute (RPI)</h2>
+            <p v-if="visibleSection ==='rpi'">Here, I am dual majoring in computer 
               science (with a focus in machine learning and AI) and philosophy. I am a part
               of Rensselaer Center for Open Source (RCOS), a great program my school offers 
               that allows students to create and explore projects of their choice. Alongside
@@ -34,8 +34,8 @@
           </div>
 
           <div class = "school">
-            <h1 @click="toggleSection('srjc')">Santa Rosa Junior College</h1>
-            <p v-if="isSectionVisible('srjc')">While in high school, I took numerous
+            <h2 @click="toggleSection('srjc')">Santa Rosa Junior College</h2>
+            <p v-if="visibleSection === 'srjc'">While in high school, I took numerous
               junior college courses to get a head start on my education at the Santa
               Rosa Junior College. I earned certificates in Full Stack Web Development,
               Web & Multimedia Studies, and Front-End Web Development, along with taking
@@ -45,8 +45,8 @@
           </div>
 
           <div class = "school">
-            <h1 @click="toggleSection('hhs')">Healdsburg High School</h1>
-            <p v-if="isSectionVisible('hhs')">While in high school, I started taking
+            <h2 @click="toggleSection('hhs')">Healdsburg High School</h2>
+            <p v-if="visibleSection === 'hhs'">While in high school, I started taking
               computer science classes where I learned I enjoyed the subject. I participated
               in web development competitions through SkillsUSA, helped write a bill for the 
               California Senate through Ed100, earned the Rensselaer Medal of Honor (an award 
@@ -71,18 +71,18 @@
   export default {
     name: 'AboutPage',
     setup() {
-    const visibleSections = ref({
-      rpi: false,
-      srjc: false,
-      hhs: false,
-    })
+    const visibleSection = ref(null)
 
     const toggleSection = (section) => {
-      visibleSections.value[section] = !visibleSections.value[section]
+      if (visibleSection.value === section) {
+        visibleSection.value = null
+      } else {
+        visibleSection.value = section
+      }
     }
 
     return {
-      visibleSections,
+      visibleSection,
       toggleSection,
     }
   },
@@ -115,5 +115,9 @@
     margin: 2rem;
   }
 
+  /* Specifically, the titles for foldable sections */
+  h2 {
+    font-weight: 100;
+  }
 
 </style>
