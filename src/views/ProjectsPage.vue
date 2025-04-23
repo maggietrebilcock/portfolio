@@ -2,7 +2,7 @@
 <template>
     <div>
       <h1>Welcome to my projects page</h1>
-      <p>This is some details about prjects I have worked on.</p>
+      <p>This page is still under construction. Check back soon!</p>
     </div>
   </template>
   

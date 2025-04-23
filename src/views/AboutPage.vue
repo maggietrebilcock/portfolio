@@ -64,6 +64,43 @@
         <img src="@/assets/placeholder.jpg" alt="picture of RPI" />
       </div>
     </div>
+
+
+    <div class ="sections third">
+      <div class ="image_div">
+        <img src="@/assets/placeholder.jpg" alt="picture of River's Edge Kayak & Canoe in Healdsburg" />
+      </div>
+      <div class ="text_div">
+        <h1>work experience</h1>
+        
+        <div class = "jobs">
+
+          <div class = "job">
+            <h2 @click="toggleSection2('re')">River's Edge Kayak & Canoe</h2>
+            <p v-if="visibleSection ==='re'">Here, I worked as the Office Manager, where
+              I helped manage the company's online presence, including the website and 
+              social media. I also helped coordinate day-to-day operations, including but not 
+              limited to: customer service, scheduling, teaching customers to kayak, and leading
+              kayak tours.
+            </p>
+          </div>
+
+          <div class = "school">
+            <h2 @click="toggleSection2('bakery')">Downtown Bakery & Creamery</h2>
+            <p v-if="visibleSection === 'bakery'">At the Downtown Bakery & Creamery, 
+              I was a front-end worker, where I made drinks, packed pastries, worked 
+              on the breakfast line, and more.</p>
+          </div>
+
+          <div class = "school">
+            <h2 @click="toggleSection2('e&m')">E&M Electric</h2>
+            <p v-if="visibleSection === 'e&m'"></p>
+          </div>
+
+        </div>
+      </div> 
+      
+    </div>
   </template>
   
   <script>
@@ -72,6 +109,7 @@
     name: 'AboutPage',
     setup() {
     const visibleSection = ref(null)
+    const visibleSection2 = ref(null)
 
     const toggleSection = (section) => {
       if (visibleSection.value === section) {
@@ -81,9 +119,19 @@
       }
     }
 
+    const toggleSection2 = (section) => {
+      if (visibleSection.value === section) {
+        visibleSection.value = null
+      } else {
+        visibleSection.value = section
+      }
+    }
+
     return {
       visibleSection,
+      visibleSection2,
       toggleSection,
+      toggleSection2
     }
   },
   }
@@ -113,7 +161,9 @@
     justify-content: center;
     align-items: center;
     margin: 2rem;
+    width: 100%;
   }
+
 
   /* Specifically, the titles for foldable sections */
   h2 {
