@@ -68,7 +68,7 @@
 
     <div class ="sections third">
       <div class ="image_div">
-        <img src="@/assets/placeholder.jpg" alt="picture of River's Edge Kayak & Canoe in Healdsburg" />
+        <img src="@/assets/kayak_river.jpg" alt="picture of River's Edge Kayak & Canoe in Healdsburg" />
       </div>
       <div class ="text_div">
         <h1>work experience</h1>
@@ -178,4 +178,25 @@
     text-align: right;
   }
 
+  @media (max-width: 1024px) {
+      html, body {
+        overflow: auto;
+        width: 100%;
+      }
+      .sections {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .school, .job, .text_div {
+        width: auto;
+        text-align: center;
+      }
+      .first, .third {
+        text-align: left;
+      }
+      .second {
+        flex-direction: column-reverse;
+      }
+    }
 </style>
