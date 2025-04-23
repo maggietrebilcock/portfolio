@@ -22,18 +22,38 @@
         <div class = "schools">
 
           <div class = "school">
-            <h1 @click="toggleSection('rpi')">Rensselaer Polytechnic Institute</h1>
-            <p v-if="isSectionVisible('rpi')">RPI is a great place to study engineering and technology.</p>
+            <h1 @click="toggleSection('rpi')">Rensselaer Polytechnic Institute (RPI)</h1>
+            <p v-if="isSectionVisible('rpi')">Here, I am dual majoring in computer 
+              science (with a focus in machine learning and AI) and philosophy. I am a part
+              of Rensselaer Center for Open Source (RCOS), a great program my school offers 
+              that allows students to create and explore projects of their choice. Alongside
+              other RPI students, I am working on a university-wide course scheduler called 
+              YACS. For more information about YACS, head to my Projects page. I also run my
+              own radio show on WRPI 91.5 FM (RPI's college radio) and play ultimate frisbee
+              on RPI's club team.</p>
           </div>
 
           <div class = "school">
-            <h1 @click="toggleSection('srjc')">San Jose City College</h1>
-            <p v-if="isSectionVisible('srjc')">SJCC offers a variety of programs and is a great place to start your education.</p>
+            <h1 @click="toggleSection('srjc')">Santa Rosa Junior College</h1>
+            <p v-if="isSectionVisible('srjc')">While in high school, I took numerous
+              junior college courses to get a head start on my education at the Santa
+              Rosa Junior College. I earned certificates in Full Stack Web Development,
+              Web & Multimedia Studies, and Front-End Web Development, along with taking
+              classes in subjects such as Spanish, American Sign Language, fashion, and 
+              more.
+            </p>
           </div>
 
           <div class = "school">
-            <h1 @click="toggleSection('hhs')">High School</h1>
-            <p v-if="isSectionVisible('hhs')">My high school experience was enriching and laid the foundation for my future studies.</p>
+            <h1 @click="toggleSection('hhs')">Healdsburg High School</h1>
+            <p v-if="isSectionVisible('hhs')">While in high school, I started taking
+              computer science classes where I learned I enjoyed the subject. I participated
+              in web development competitions through SkillsUSA, helped write a bill for the 
+              California Senate through Ed100, earned the Rensselaer Medal of Honor (an award 
+              given to high school students who excel in math and science), and was a part of/ 
+              lead several clubs, including Model UN, FFA, Key Club, cross country, and track 
+              & field.
+            </p>
           </div>
 
         </div>
@@ -51,14 +71,12 @@
   export default {
     name: 'AboutPage',
     setup() {
-    // Reactive state to track visibility of sections
     const visibleSections = ref({
-      rpi: false, // Initially hidden
-      srjc: false, // Initially hidden
-      hhs: false, // Initially hidden
+      rpi: false,
+      srjc: false,
+      hhs: false,
     })
 
-    // Function to toggle visibility
     const toggleSection = (section) => {
       visibleSections.value[section] = !visibleSections.value[section]
     }
