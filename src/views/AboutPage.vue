@@ -94,7 +94,10 @@
 
           <div class = "school">
             <h2 @click="toggleSection2('e&m')">E&M Electric</h2>
-            <p v-if="visibleSection === 'e&m'"></p>
+            <p v-if="visibleSection === 'e&m'">I worked in the accounting division of
+              this company learning about the accounting process and how to use manage
+              a large database using SQL and other languagues and techniques.
+            </p>
           </div>
 
         </div>
