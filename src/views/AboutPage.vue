@@ -99,7 +99,6 @@
               a large database using SQL and other languagues and techniques.
             </p>
           </div>
-
         </div>
       </div> 
       
@@ -154,8 +153,6 @@
   img {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
-    margin: 2rem;
   }
 
   .sections {
@@ -163,14 +160,22 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
     margin: 2rem;
     width: 100%;
   }
 
+  .school, .job, .text_div {
+    width: 35rem;
+  }
 
   /* Specifically, the titles for foldable sections */
   h2 {
     font-weight: 100;
+  }
+
+  .first, .third {
+    text-align: right;
   }
 
 </style>
